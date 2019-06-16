@@ -1,0 +1,62 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "movie",
+    "description": "Movie info"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "poster_path": {
+      "type": "string"
+    },
+    "adult": {
+      "type": "boolean"
+    },
+    "release_date": {
+      "type": "date"
+    },
+    "tmdb_id": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "original_title": {
+      "type": "string"
+    },
+    "original_language": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "backdrop_path": {
+      "type": "string"
+    },
+    "popularity": {
+      "type": "integer"
+    },
+    "vote_count": {
+      "type": "integer"
+    },
+    "video": {
+      "type": "boolean"
+    },
+    "vote_average": {
+      "type": "decimal"
+    },
+    "overview": {
+      "type": "text"
+    },
+    "genres": {
+      "collection": "genre",
+      "via": "movie"
+    },
+    "videos": {
+      "collection": "video",
+      "via": "movie"
+    }
+  }
+}
