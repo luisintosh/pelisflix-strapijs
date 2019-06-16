@@ -542,7 +542,7 @@
             "type": "string"
           },
           "popularity": {
-            "type": "integer"
+            "type": "number"
           },
           "vote_count": {
             "type": "integer"
@@ -583,7 +583,8 @@
             "items": {
               "required": [
                 "id",
-                "url"
+                "url",
+                "lang"
               ],
               "properties": {
                 "id": {
@@ -604,10 +605,13 @@
                 "server": {
                   "type": "string"
                 },
-                "movie": {
+                "sourcepage": {
                   "type": "string"
                 },
-                "sourcepage": {
+                "lang": {
+                  "type": "string"
+                },
+                "movie": {
                   "type": "string"
                 }
               }
@@ -645,7 +649,7 @@
             "type": "string"
           },
           "popularity": {
-            "type": "integer"
+            "type": "number"
           },
           "vote_count": {
             "type": "integer"

@@ -511,7 +511,8 @@
       "Video": {
         "required": [
           "id",
-          "url"
+          "url",
+          "lang"
         ],
         "properties": {
           "id": {
@@ -549,6 +550,41 @@
               }
             }
           },
+          "sourcepage": {
+            "required": [
+              "id",
+              "url"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "hits": {
+                "type": "integer"
+              },
+              "lastScraped": {
+                "type": "string"
+              },
+              "videos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "lang": {
+            "type": "string",
+            "default": "es_la",
+            "enum": [
+              "es",
+              "es_la",
+              "en"
+            ]
+          },
           "movie": {
             "required": [
               "id",
@@ -583,7 +619,7 @@
                 "type": "string"
               },
               "popularity": {
-                "type": "integer"
+                "type": "number"
               },
               "vote_count": {
                 "type": "integer"
@@ -610,38 +646,13 @@
                 }
               }
             }
-          },
-          "sourcepage": {
-            "required": [
-              "id",
-              "url"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "hits": {
-                "type": "integer"
-              },
-              "lastScraped": {
-                "type": "string"
-              },
-              "videos": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
       "NewVideo": {
         "required": [
-          "url"
+          "url",
+          "lang"
         ],
         "properties": {
           "url": {
@@ -662,10 +673,19 @@
           "server": {
             "type": "string"
           },
-          "movie": {
+          "sourcepage": {
             "type": "string"
           },
-          "sourcepage": {
+          "lang": {
+            "type": "string",
+            "default": "es_la",
+            "enum": [
+              "es",
+              "es_la",
+              "en"
+            ]
+          },
+          "movie": {
             "type": "string"
           }
         }

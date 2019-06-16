@@ -533,7 +533,8 @@
             "items": {
               "required": [
                 "id",
-                "url"
+                "url",
+                "lang"
               ],
               "properties": {
                 "id": {
@@ -554,10 +555,13 @@
                 "server": {
                   "type": "string"
                 },
-                "movie": {
+                "sourcepage": {
                   "type": "string"
                 },
-                "sourcepage": {
+                "lang": {
+                  "type": "string"
+                },
+                "movie": {
                   "type": "string"
                 }
               }

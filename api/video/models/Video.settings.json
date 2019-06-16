@@ -31,12 +31,22 @@
     "server": {
       "model": "server"
     },
-    "movie": {
-      "model": "movie",
-      "via": "videos"
-    },
     "sourcepage": {
       "model": "sourcepage",
+      "via": "videos"
+    },
+    "lang": {
+      "required": true,
+      "enum": [
+        "es",
+        "es_la",
+        "en"
+      ],
+      "default": "es_la",
+      "type": "enumeration"
+    },
+    "movie": {
+      "model": "movie",
       "via": "videos"
     }
   }

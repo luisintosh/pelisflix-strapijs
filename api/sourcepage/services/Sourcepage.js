@@ -41,6 +41,39 @@ module.exports = {
     } catch (e) {
       strapi.log.error('Sourcepage scanSitemaps :: ' + e.toString());
     }
-  }
+  },
+
+  /**
+   * Get a page url with the date of last scrapping lower than this month
+   * @returns {*}
+   */
+  getPageUrl(filter) {
+    const lastMonth = new Date();
+    if (lastMonth.getMonth() === 0) {
+      lastMonth.setFullYear(lastMonth.getFullYear() - 1, 11);
+    } else {
+      lastMonth.setMonth(lastMonth.getMonth() - 1);
+    }
+    // return next page url to do scraping
+    // eslint-disable-next-line no-undef
+    return Sourcepage.findOne({
+      $or: [ { lastScraped: { $exists: false } }, { lastScraped: { $lte: lastMonth } } ],
+      url: new RegExp(filter, 'i')
+    });
+  },
+
+  /**
+   * Update model 'lastScraped' and 'hits' value
+   * @param model: Sourcepage
+   * @returns {*|void}
+   */
+  addNewHit(model) {
+    strapi.log.info('Sourcepage :: Updating model with a new hit');
+    model.lastScraped = new Date();
+    model.hits += 1;
+    return model.save();
+  },
+
+
 
 };

@@ -556,7 +556,7 @@
                 "type": "string"
               },
               "popularity": {
-                "type": "integer"
+                "type": "number"
               },
               "vote_count": {
                 "type": "integer"

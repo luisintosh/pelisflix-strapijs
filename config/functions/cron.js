@@ -24,4 +24,10 @@ module.exports = {
     strapi.log.info('CRON: Running sitemap scanning');
     await strapi.services.sourcepage.scanSitemaps();
   },
+
+  // Run every 3 minutes
+  '*/3 * * * *': async () => {
+    strapi.log.info('CRON: Running web scraping');
+    await strapi.services.movie.runScrapers();
+  },
 };

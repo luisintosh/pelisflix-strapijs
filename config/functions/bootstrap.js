@@ -9,5 +9,9 @@
  */
 
 module.exports = cb => {
+  // create genre and server rows in database
+  strapi.services.genre.initDatabase();
+  strapi.services.server.initDatabase();
+
   cb();
 };

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/15/2019 9:49:31 PM"
+    "x-generation-date": "06/16/2019 1:18:58 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4686,7 +4686,7 @@
                 "type": "string"
               },
               "popularity": {
-                "type": "integer"
+                "type": "number"
               },
               "vote_count": {
                 "type": "integer"
@@ -4763,7 +4763,7 @@
             "type": "string"
           },
           "popularity": {
-            "type": "integer"
+            "type": "number"
           },
           "vote_count": {
             "type": "integer"
@@ -4804,7 +4804,8 @@
             "items": {
               "required": [
                 "id",
-                "url"
+                "url",
+                "lang"
               ],
               "properties": {
                 "id": {
@@ -4825,10 +4826,13 @@
                 "server": {
                   "type": "string"
                 },
-                "movie": {
+                "sourcepage": {
                   "type": "string"
                 },
-                "sourcepage": {
+                "lang": {
+                  "type": "string"
+                },
+                "movie": {
                   "type": "string"
                 }
               }
@@ -4866,7 +4870,7 @@
             "type": "string"
           },
           "popularity": {
-            "type": "integer"
+            "type": "number"
           },
           "vote_count": {
             "type": "integer"
@@ -4949,7 +4953,8 @@
             "items": {
               "required": [
                 "id",
-                "url"
+                "url",
+                "lang"
               ],
               "properties": {
                 "id": {
@@ -4970,10 +4975,13 @@
                 "server": {
                   "type": "string"
                 },
-                "movie": {
+                "sourcepage": {
                   "type": "string"
                 },
-                "sourcepage": {
+                "lang": {
+                  "type": "string"
+                },
+                "movie": {
                   "type": "string"
                 }
               }
@@ -5008,7 +5016,8 @@
       "Video": {
         "required": [
           "id",
-          "url"
+          "url",
+          "lang"
         ],
         "properties": {
           "id": {
@@ -5046,6 +5055,41 @@
               }
             }
           },
+          "sourcepage": {
+            "required": [
+              "id",
+              "url"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "hits": {
+                "type": "integer"
+              },
+              "lastScraped": {
+                "type": "string"
+              },
+              "videos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "lang": {
+            "type": "string",
+            "default": "es_la",
+            "enum": [
+              "es",
+              "es_la",
+              "en"
+            ]
+          },
           "movie": {
             "required": [
               "id",
@@ -5080,7 +5124,7 @@
                 "type": "string"
               },
               "popularity": {
-                "type": "integer"
+                "type": "number"
               },
               "vote_count": {
                 "type": "integer"
@@ -5107,38 +5151,13 @@
                 }
               }
             }
-          },
-          "sourcepage": {
-            "required": [
-              "id",
-              "url"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "hits": {
-                "type": "integer"
-              },
-              "lastScraped": {
-                "type": "string"
-              },
-              "videos": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
       "NewVideo": {
         "required": [
-          "url"
+          "url",
+          "lang"
         ],
         "properties": {
           "url": {
@@ -5159,10 +5178,19 @@
           "server": {
             "type": "string"
           },
-          "movie": {
+          "sourcepage": {
             "type": "string"
           },
-          "sourcepage": {
+          "lang": {
+            "type": "string",
+            "default": "es_la",
+            "enum": [
+              "es",
+              "es_la",
+              "en"
+            ]
+          },
+          "movie": {
             "type": "string"
           }
         }
