@@ -1,0 +1,12 @@
+{
+  "name": "Pelisflix",
+  "description": "Pelisflix backend",
+  "repository": "https://github.com/luisintosh/pelisflix-strapijs",
+  "keywords": ["node", "strapi", "API"],
+  "addons": [
+    {
+      "plan": "mongolab:sandbox",
+      "as": "DATABASE"
+    }
+  ]
+}
