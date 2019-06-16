@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/genres",
+      "handler": "Genre.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/genres/count",
+      "handler": "Genre.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/genres/:_id",
+      "handler": "Genre.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/genres",
+      "handler": "Genre.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/genres/:_id",
+      "handler": "Genre.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/genres/:_id",
+      "handler": "Genre.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
