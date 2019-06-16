@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "sourcepage",
+    "description": "Movie web pages to scrape videos"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "url": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "hits": {
+      "type": "integer",
+      "default": "0"
+    },
+    "lastScraped": {
+      "default": "0",
+      "type": "date"
+    }
+  }
+}
