@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "sourcepage",
   "info": {
     "name": "sourcepage",
     "description": "Movie web pages to scrape videos"
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "url": {
@@ -21,6 +24,10 @@
     "lastScraped": {
       "default": "0",
       "type": "date"
+    },
+    "videos": {
+      "collection": "video",
+      "via": "sourcepage"
     }
   }
 }

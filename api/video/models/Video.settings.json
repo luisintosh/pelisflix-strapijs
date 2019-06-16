@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "video",
   "info": {
     "name": "video",
     "description": "Video links to watch movies"
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "url": {
@@ -30,6 +33,10 @@
     },
     "movie": {
       "model": "movie",
+      "via": "videos"
+    },
+    "sourcepage": {
+      "model": "sourcepage",
       "via": "videos"
     }
   }
