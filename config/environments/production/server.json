@@ -1,12 +1,12 @@
 {
-  "host": "localhost",
-  "port": "${process.env.PORT || 1337}",
+  "host": "pelisflix.herokuapp.com",
+  "port": "${process.env.PORT || 443}",
   "production": true,
   "proxy": {
     "enabled": false
   },
   "cron": {
-    "enabled": false
+    "enabled": true
   },
   "admin": {
     "autoOpen": false
