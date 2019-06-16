@@ -18,4 +18,10 @@ module.exports = {
   // '0 1 * * 1': () => {
   //
   // }
+
+  // Run every day at 4 am
+  '0 4 * * *': async () => {
+    strapi.log.info('CRON: Running sitemap scanning');
+    await strapi.services.sourcepage.scanSitemaps();
+  },
 };
