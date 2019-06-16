@@ -1,0 +1,32 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "video",
+    "description": "Video links to watch movies"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "url": {
+      "required": true,
+      "type": "string"
+    },
+    "hits": {
+      "type": "integer",
+      "default": "0"
+    },
+    "likes": {
+      "type": "integer",
+      "default": "0"
+    },
+    "dislikes": {
+      "type": "integer",
+      "default": "0"
+    },
+    "server": {
+      "model": "server"
+    }
+  }
+}
