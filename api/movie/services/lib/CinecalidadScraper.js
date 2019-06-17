@@ -123,7 +123,7 @@ module.exports = {
     const page = await strapi.services.sourcepage.getPageUrl('cinecalidad');
 
     if (!page) {
-      strapi.log.error('Cinecalidad :: No page found');
+      strapi.log.info('Cinecalidad :: No pending page found');
       return null;
     } else {
       strapi.log.info('Cinecalidad :: Scraping page ' + page.url);
@@ -137,8 +137,8 @@ module.exports = {
       const {originalTitle, year, videoLinks} = await getVideoLinks(page.url);
 
       if (videoLinks && !videoLinks.length) {
-        strapi.log.error('Cinecalidad :: No video links found');
-        return null;
+        // strapi.log.error('Cinecalidad :: No video links found');
+        throw 'No video links found';
       } else {
         strapi.log.info(`Cinecalidad :: ${videoLinks.length} video links found`);
       }
@@ -147,8 +147,8 @@ module.exports = {
       const movieObj = await TMDB.findMovieByTitle(originalTitle, year);
 
       if (!movieObj) {
-        strapi.log.error('Cinecalidad :: No movie found');
-        return null;
+        // strapi.log.error('Cinecalidad :: No movie found');
+        throw 'No movie found';
       } else {
         strapi.log.info(`Cinecalidad :: Movie found ${movieObj.title} (${movieObj.release_date})`);
       }
