@@ -110,6 +110,9 @@ const getVideoLinks = async (pageUrl) => {
     strapi.log.error('CliverScraper :: ' + e.toString());
   }
 
+  // close browser to save memory
+  await browser.close();
+
   // Bohemian Rhapsody, 2018, [ { idioma, url, ... } ]
   const result = {originalTitle, year, videoLinks};
   // strapi.log.info('CliverScraper :: Page result ' + JSON.stringify(result));
