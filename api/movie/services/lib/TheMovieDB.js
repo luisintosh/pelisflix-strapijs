@@ -35,4 +35,14 @@ module.exports = {
       });
   },
 
+  findMovieById: (tmdbId) => {
+    return rp(`${TMDB_DATA_API}/movie/${tmdbId}`, {
+      qs: {
+        api_key: TMDB_API_KEY,
+        language: TMDB_API_LANG,
+      },
+      json: true
+    });
+  },
+
 };

@@ -157,12 +157,17 @@ module.exports = {
       // eslint-disable-next-line no-undef
       movie = await Movie.findOne({tmdb_id: movieObj.id});
       if (!movie || ( movie && !movie._id )) {
-        const genres = [];
         for (let g = 0; g < movieObj.genre_ids.length; g++) {
+          const g = movieObj.genre_ids[g];
           // eslint-disable-next-line no-undef
-          const genre = await Genre.findOne({tmdb_id: movieObj.genre_ids[g]});
-          if (genre) {
-            genres.push(genre._id);
+          const genre = await Genre.findOne({tmdb_id: g});
+          if (genre && genre.id) {
+            if (Array.isArray(genre.movie)) {
+                genre.movie.push(movie.id);
+            } else {
+                genre.movie = [movie.id];
+            }
+            await genre.save(); // assign movies to genre
           }
         }
 
@@ -181,7 +186,6 @@ module.exports = {
           video: movieObj.video,
           vote_average: movieObj.vote_average,
           overview: movieObj.overview,
-          genres: genres,
         }).save();
       }
 

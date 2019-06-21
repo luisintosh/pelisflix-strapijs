@@ -14,5 +14,8 @@ module.exports = cb => {
   strapi.services.server.initDatabase();
   strapi.services.sourcepage.scanSitemaps();
 
+  // fixer
+  // strapi.services.movie.movieFixer();
+
   cb();
 };
