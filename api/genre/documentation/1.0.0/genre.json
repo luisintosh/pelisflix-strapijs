@@ -521,68 +521,6 @@
           },
           "tmdb_id": {
             "type": "integer"
-          },
-          "movie": {
-            "required": [
-              "id",
-              "tmdb_id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "poster_path": {
-                "type": "string"
-              },
-              "adult": {
-                "type": "boolean"
-              },
-              "release_date": {
-                "type": "string"
-              },
-              "tmdb_id": {
-                "type": "integer"
-              },
-              "original_title": {
-                "type": "string"
-              },
-              "original_language": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "backdrop_path": {
-                "type": "string"
-              },
-              "popularity": {
-                "type": "number"
-              },
-              "vote_count": {
-                "type": "integer"
-              },
-              "video": {
-                "type": "boolean"
-              },
-              "vote_average": {
-                "type": "number"
-              },
-              "overview": {
-                "type": "string"
-              },
-              "genres": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "videos": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },

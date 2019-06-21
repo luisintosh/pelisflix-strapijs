@@ -17,7 +17,8 @@
     },
     "movie": {
       "model": "movie",
-      "via": "genres"
+      "via": "genres",
+      "private": true
     }
   }
 }
