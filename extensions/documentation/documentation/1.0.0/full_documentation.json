@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/21/2019 4:43:42 PM"
+    "x-generation-date": "06/22/2019 5:26:28 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4651,6 +4651,71 @@
           },
           "tmdb_id": {
             "type": "integer"
+          },
+          "movies": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "tmdb_id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "poster_path": {
+                  "type": "string"
+                },
+                "adult": {
+                  "type": "boolean"
+                },
+                "release_date": {
+                  "type": "string"
+                },
+                "tmdb_id": {
+                  "type": "integer"
+                },
+                "original_title": {
+                  "type": "string"
+                },
+                "original_language": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "backdrop_path": {
+                  "type": "string"
+                },
+                "popularity": {
+                  "type": "number"
+                },
+                "vote_count": {
+                  "type": "integer"
+                },
+                "video": {
+                  "type": "boolean"
+                },
+                "vote_average": {
+                  "type": "number"
+                },
+                "overview": {
+                  "type": "string"
+                },
+                "videos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "genres": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -4662,8 +4727,11 @@
           "tmdb_id": {
             "type": "integer"
           },
-          "movie": {
-            "type": "string"
+          "movies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -4715,28 +4783,6 @@
           "overview": {
             "type": "string"
           },
-          "genres": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "tmdb_id": {
-                  "type": "integer"
-                },
-                "movie": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "videos": {
             "type": "array",
             "items": {
@@ -4772,6 +4818,31 @@
                 },
                 "movie": {
                   "type": "string"
+                }
+              }
+            }
+          },
+          "genres": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "tmdb_id": {
+                  "type": "integer"
+                },
+                "movies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -4822,13 +4893,13 @@
           "overview": {
             "type": "string"
           },
-          "genres": {
+          "videos": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "videos": {
+          "genres": {
             "type": "array",
             "items": {
               "type": "string"
@@ -5076,13 +5147,13 @@
               "overview": {
                 "type": "string"
               },
-              "genres": {
+              "videos": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "videos": {
+              "genres": {
                 "type": "array",
                 "items": {
                   "type": "string"

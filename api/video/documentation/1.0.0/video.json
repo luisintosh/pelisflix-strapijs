@@ -633,13 +633,13 @@
               "overview": {
                 "type": "string"
               },
-              "genres": {
+              "videos": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "videos": {
+              "genres": {
                 "type": "array",
                 "items": {
                   "type": "string"

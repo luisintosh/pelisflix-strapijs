@@ -14,6 +14,9 @@ module.exports = {
    * @returns {Promise<void>}
    */
   async scanSitemaps() {
+    const host = process.env.HOST || process.env.HOSTNAME || 'localhost';
+    if (host === 'localhost') return;
+
     try {
       // Scan websites
       strapi.log.info('Sourcepage scanSitemaps :: Init function');

@@ -15,8 +15,8 @@
     "tmdb_id": {
       "type": "integer"
     },
-    "movie": {
-      "model": "movie",
+    "movies": {
+      "collection": "movie",
       "via": "genres",
       "private": true
     }

@@ -164,22 +164,8 @@ module.exports = {
       // eslint-disable-next-line no-undef
       movie = await Movie.findOne({tmdb_id: movieObj.id});
       if (!movie || ( movie && !movie._id )) {
-        for (let g = 0; g < movieObj.genre_ids.length; g++) {
-          const g = movieObj.genre_ids[g];
-          // eslint-disable-next-line no-undef
-          const genre = await Genre.findOne({tmdb_id: g});
-          if (genre && genre.id) {
-            if (Array.isArray(genre.movie)) {
-                genre.movie.push(movie.id);
-            } else {
-                genre.movie = [movie.id];
-            }
-            await genre.save(); // assign movies to genre
-          }
-        }
-
         // eslint-disable-next-line no-undef
-        movie = await new Movie({
+        movie = new Movie({
           tmdb_id: movieObj.id,
           poster_path: movieObj.poster_path,
           adult: movieObj.adult,
@@ -193,7 +179,22 @@ module.exports = {
           video: movieObj.video,
           vote_average: movieObj.vote_average,
           overview: movieObj.overview,
-        }).save();
+        });
+        // add genres
+        for (let g = 0; g < movieObj.genre_ids.length; g++) {
+          const g = movieObj.genre_ids[g];
+          // eslint-disable-next-line no-undef
+          const genre = await Genre.findOne({tmdb_id: g});
+          if (genre && genre.id) {
+            if (Array.isArray(movie.genres)) {
+              movie.genres.push(genre.id);
+            } else {
+              movie.genres = [genre.id];
+            }
+          }
+        }
+
+        await movie.save();
       }
 
       // get all allowed video servers
