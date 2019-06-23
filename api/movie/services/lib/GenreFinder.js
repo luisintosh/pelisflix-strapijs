@@ -34,6 +34,7 @@ module.exports = {
 
           await movie.save();
           strapi.log.info('GenreFinder :: Genres saved! = ' + movie.genres.length);
+          await new Promise(resolve => setTimeout(resolve, 1000));
         }
       }
     }
