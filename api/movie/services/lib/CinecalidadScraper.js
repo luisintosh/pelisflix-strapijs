@@ -175,9 +175,8 @@ module.exports = {
         });
         // add genres
         for (let g = 0; g < movieObj.genre_ids.length; g++) {
-          const g = movieObj.genre_ids[g];
           // eslint-disable-next-line no-undef
-          const genre = await Genre.findOne({tmdb_id: g});
+          const genre = await Genre.findOne({tmdb_id: movieObj.genre_ids[g]});
           if (genre && genre.id) {
             if (Array.isArray(movie.genres)) {
               movie.genres.push(genre.id);
