@@ -179,9 +179,9 @@ module.exports = {
           const genre = await Genre.findOne({tmdb_id: movieObj.genre_ids[g]});
           if (genre && genre.id) {
             if (Array.isArray(movie.genres)) {
-              movie.genres.push(genre.id);
+              movie.genres.push(genre._id);
             } else {
-              movie.genres = [genre.id];
+              movie.genres = [genre._id];
             }
           }
         }

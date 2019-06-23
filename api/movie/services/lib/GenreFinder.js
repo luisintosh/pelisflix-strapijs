@@ -27,9 +27,7 @@ module.exports = {
           for (let x = 0; x < movieApi.genres.length; x++) {
             const g = movieApi.genres[x];
             const genre = genres.filter(gen => gen.tmdb_id === g.id);
-            if (movie.genres && movie.genres.length) {
-              movie.genres.push(genre.id);
-            }
+            movie.genres.push(genre._id);
           }
 
           await movie.save();
