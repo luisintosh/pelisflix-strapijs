@@ -15,7 +15,7 @@ module.exports = cb => {
   strapi.services.sourcepage.scanSitemaps();
 
   // fixer
-  strapi.services.movie.movieFixer();
+  // strapi.services.movie.movieFixer();
 
   cb();
 };
