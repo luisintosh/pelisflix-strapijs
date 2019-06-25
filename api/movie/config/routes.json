@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/movies/all",
+      "handler": "Movie.getAll",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/movies",
       "handler": "Movie.find",
       "config": {
