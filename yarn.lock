@@ -9861,10 +9861,10 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
-strapi-admin@3.0.0-beta.5:
-  version "3.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/strapi-admin/-/strapi-admin-3.0.0-beta.5.tgz#6dd19a6e00639227e96d69159942b1c28074e1ec"
-  integrity sha512-EZbbrBtXJMxY+UnCTvYO00gvG/zBGem8/x3jySwJChBtW08iUjQ+jJ/n0uu07EV4ge9qx/8bBfI42qBue6fn8g==
+strapi-admin@3.0.0-beta.8:
+  version "3.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/strapi-admin/-/strapi-admin-3.0.0-beta.8.tgz#2d4f9c8f007a96e58dd8feb6ccbef7cd3915f0c2"
+  integrity sha512-qyPcliRviOoE2ZnxwC2TxcIpoCHC0UOVG5tiJZv3DBxp3UPPYpnknJWHHCGn+nVEBpYBCjqb1fNhANgu13B9Tw==
   dependencies:
     "@babel/core" "^7.4.3"
     "@babel/plugin-proposal-async-generator-functions" "^7.2.0"
@@ -9927,8 +9927,8 @@ strapi-admin@3.0.0-beta.5:
     sanitize.css "^4.1.0"
     sass-loader "^7.1.0"
     shelljs "^0.7.8"
-    strapi-helper-plugin "3.0.0-beta.5"
-    strapi-utils "3.0.0-beta.5"
+    strapi-helper-plugin "3.0.0-beta.8"
+    strapi-utils "3.0.0-beta.8"
     style-loader "^0.23.1"
     styled-components "^4.2.0"
     terser-webpack-plugin "^1.2.3"
@@ -10013,6 +10013,26 @@ strapi-helper-plugin@3.0.0-beta.5:
   version "3.0.0-beta.5"
   resolved "https://registry.yarnpkg.com/strapi-helper-plugin/-/strapi-helper-plugin-3.0.0-beta.5.tgz#1f7860516b6ac0f24902efc2a2fba57a90b9e099"
   integrity sha512-ZXUsBSnJ9epNpTzpeRQY68FPDK0p34UPJHke0uv8mZh34kwgg7UXDtnOBXrAATHS2QDqxPTFMdwRWqs+jLRMEQ==
+  dependencies:
+    bootstrap "^4.0.0-alpha.6"
+    classnames "^2.2.5"
+    immutable "^3.8.2"
+    invariant "^2.2.1"
+    lodash "^4.17.5"
+    moment "^2.16.0"
+    react "^16.0.0"
+    react-datetime "^2.16.3"
+    react-dom "^16.0.0"
+    react-intl "^2.8.0"
+    react-router "^5.0.0"
+    react-router-dom "^5.0.0"
+    reactstrap "^5.0.0"
+    whatwg-fetch "^2.0.3"
+
+strapi-helper-plugin@3.0.0-beta.8:
+  version "3.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/strapi-helper-plugin/-/strapi-helper-plugin-3.0.0-beta.8.tgz#2dfcc9b10842570f3656d7430e2b2266aeb1b833"
+  integrity sha512-0B3QI/e900Nx4Tv2Yl73JQCTtCC+pDXhPgjjLEy5YpyBreOkW9zOcTEurhngm6s7XSeev7t582aFogWVhBua0A==
   dependencies:
     bootstrap "^4.0.0-alpha.6"
     classnames "^2.2.5"
@@ -10180,10 +10200,10 @@ strapi-plugin-upload@3.0.0-beta.5:
     stream-to-array "^2.3.0"
     uuid "^3.2.1"
 
-strapi-plugin-users-permissions@3.0.0-beta.5:
-  version "3.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/strapi-plugin-users-permissions/-/strapi-plugin-users-permissions-3.0.0-beta.5.tgz#6eb914c550442425639790a1de41c23ed6dce117"
-  integrity sha512-LFjd3H0Q0m7qjoJgMImqqPZFvmY+lh2tt1klHZtCuLOU4oOrAw7viUmwGyoj61FHohNXGi9dmyk7OdMOZanm+Q==
+strapi-plugin-users-permissions@3.0.0-beta.8:
+  version "3.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-users-permissions/-/strapi-plugin-users-permissions-3.0.0-beta.8.tgz#79a3c1a2387e246b2c669083780445552801ca3a"
+  integrity sha512-lgr2J23U9bsVZT9LxxuB9hyf3aN/4tC0sKXOtXN4qqoZgPWxARRCegjWPuUB1zxOBJmlrWSsBRSHxzLWqMuRYA==
   dependencies:
     bcryptjs "^2.4.3"
     classnames "^2.2.6"
@@ -10205,8 +10225,8 @@ strapi-plugin-users-permissions@3.0.0-beta.5:
     reactstrap "^5.0.0"
     redux-saga "^0.16.0"
     request "^2.83.0"
-    strapi-helper-plugin "3.0.0-beta.5"
-    strapi-utils "3.0.0-beta.5"
+    strapi-helper-plugin "3.0.0-beta.8"
+    strapi-utils "3.0.0-beta.8"
     uuid "^3.1.0"
 
 strapi-provider-email-sendmail@3.0.0-beta.5:
@@ -10225,6 +10245,19 @@ strapi-utils@3.0.0-beta.5:
   version "3.0.0-beta.5"
   resolved "https://registry.yarnpkg.com/strapi-utils/-/strapi-utils-3.0.0-beta.5.tgz#d0d053ae5894fce589c7b5f485304e8ba57b1914"
   integrity sha512-qiytJVKTpb82YxtbgINc8H5XPvVabULyXrr/nLP9h0RPmF/qbzcuSYOJckX1GH1EIsm9z4pqOct3bM5wLSFz7A==
+  dependencies:
+    commander "^2.20.0"
+    joi-json "^2.1.0"
+    knex "^0.16.5"
+    lodash "^4.17.11"
+    pino "^4.7.1"
+    pluralize "^7.0.0"
+    shelljs "^0.8.3"
+
+strapi-utils@3.0.0-beta.8:
+  version "3.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/strapi-utils/-/strapi-utils-3.0.0-beta.8.tgz#7001b5435ce6cf106089d4a7d01e481a96c2f310"
+  integrity sha512-PSe9c9B2b2kDlRWt/+c+wsRYNB++W69IbHyHIUwK8dBoeOeZd9QT9fOROPG6qNSaU/LentUvl/0b2FhQ7VDPbw==
   dependencies:
     commander "^2.20.0"
     joi-json "^2.1.0"

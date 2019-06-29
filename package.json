@@ -22,7 +22,7 @@
     "puppeteer": "^1.17.0",
     "request-promise": "^4.2.4",
     "strapi": "3.0.0-beta.5",
-    "strapi-admin": "3.0.0-beta.5",
+    "strapi-admin": "3.0.0-beta.8",
     "strapi-hook-mongoose": "3.0.0-beta.5",
     "strapi-plugin-content-manager": "3.0.0-beta.5",
     "strapi-plugin-content-type-builder": "3.0.0-beta.5",
@@ -30,7 +30,7 @@
     "strapi-plugin-email": "3.0.0-beta.5",
     "strapi-plugin-settings-manager": "3.0.0-beta.5",
     "strapi-plugin-upload": "3.0.0-beta.5",
-    "strapi-plugin-users-permissions": "3.0.0-beta.5",
+    "strapi-plugin-users-permissions": "3.0.0-beta.8",
     "strapi-utils": "3.0.0-beta.5",
     "x-ray": "^2.3.3",
     "xml-parser": "^1.2.1"

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/24/2019 10:42:38 PM"
+    "x-generation-date": "06/29/2019 6:10:38 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4489,7 +4489,7 @@
         "parameters": []
       }
     },
-    "/users/{_id}": {
+    "/users/{id}": {
       "get": {
         "deprecated": false,
         "description": "Retrieve a single user depending on his id",
@@ -4541,7 +4541,7 @@
         ],
         "parameters": [
           {
-            "name": "_id",
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -4603,7 +4603,7 @@
         ],
         "parameters": [
           {
-            "name": "_id",
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -4680,7 +4680,7 @@
         ],
         "parameters": [
           {
-            "name": "_id",
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
